@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAIGC Rebrand — Color Palette Vote</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header id="topbar">
+  <div id="topbar-row1">
+    <h1>NAIGC Rebrand — Color Palette Vote</h1>
+    <div id="identity-wrap">
+      <span>I am:</span>
+      <select id="identity-select">
+        <option value="">— pick your name —</option>
+        <option value="chandler">Chandler</option>
+        <option value="dot">Dot</option>
+        <option value="ilana">Ilana</option>
+        <option value="jayden">Jayden</option>
+        <option value="jules">Jules</option>
+        <option value="nate">Nate</option>
+        <option value="olivia">Olivia</option>
+        <option value="scarlett">Scarlett</option>
+        <option value="eric">Eric</option>
+        <option value="kristin">Kristin</option>
+      </select>
+    </div>
+  </div>
+  <p id="rules-line">
+    Rank your top 3 — 1st = 3 pts, 2nd = 2 pts, 3rd = 1 pt. Each rank can only go to one option. Click an active rank to clear it.
+  </p>
+</header>
+
+<section id="leaderboard-section">
+  <h2>Leaderboard <span id="vote-count" class="muted"></span></h2>
+  <div id="leaderboard"></div>
+</section>
+
+<section id="ballot-section">
+  <h2>Your Ballot</h2>
+  <div id="ballot-status" class="muted"></div>
+  <div id="ballot"></div>
+</section>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
