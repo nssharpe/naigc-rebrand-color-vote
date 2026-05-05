@@ -50,11 +50,19 @@ USERS.forEach(u => { allVotes[u.id] = {}; });
 
 // ── DOM refs ─────────────────────────────────────────────────────────────────
 
-const identitySelect = document.getElementById('identity-select');
-const leaderboardEl  = document.getElementById('leaderboard');
-const ballotEl       = document.getElementById('ballot');
-const ballotStatusEl = document.getElementById('ballot-status');
-const voteCountEl    = document.getElementById('vote-count');
+const identitySelect     = document.getElementById('identity-select');
+const leaderboardEl      = document.getElementById('leaderboard');
+const leaderboardSection = document.getElementById('leaderboard-section');
+const ballotEl           = document.getElementById('ballot');
+const ballotStatusEl     = document.getElementById('ballot-status');
+const voteCountEl        = document.getElementById('vote-count');
+const resultsToggle      = document.getElementById('results-toggle');
+
+resultsToggle.addEventListener('click', () => {
+  const showing = !leaderboardSection.hidden;
+  leaderboardSection.hidden = showing;
+  resultsToggle.textContent = showing ? 'Show results' : 'Hide results';
+});
 
 // ── Identity ─────────────────────────────────────────────────────────────────
 
