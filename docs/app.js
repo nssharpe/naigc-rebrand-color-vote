@@ -112,10 +112,20 @@ async function setRank(optionId, rank) {
   renderBallot();
   renderBallotStatus();
 
-  await setDoc(doc(db, 'votes', currentUser), {
-    ranks: myVotes,
-    updatedAt: serverTimestamp(),
-  });
+  try {
+    await setDoc(doc(db, 'votes', currentUser), {
+      ranks: myVotes,
+      updatedAt: serverTimestamp(),
+    });
+  } catch (err) {
+    console.error('Firestore write failed:', err);
+    alert(`Could not save your vote.\n\n${err.message}\n\nMost likely the Firestore security rules haven't been published yet — see the README for setup instructions.`);
+    // roll back optimistic update
+    allVotes[currentUser] = { ...allVotes[currentUser] };
+    renderLeaderboard();
+    renderBallot();
+    renderBallotStatus();
+  }
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
