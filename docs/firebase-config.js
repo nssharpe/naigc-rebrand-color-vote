@@ -2,10 +2,10 @@
 // the Web app. (Project settings → Your apps → </> Web → Register app.)
 // Keep the `export` keyword.
 export const firebaseConfig = {
-  apiKey: "REPLACE_ME",
-  authDomain: "REPLACE_ME.firebaseapp.com",
-  projectId: "REPLACE_ME",
-  storageBucket: "REPLACE_ME.firebasestorage.app",
-  messagingSenderId: "REPLACE_ME",
-  appId: "REPLACE_ME"
+  apiKey: "AIzaSyDrgsUOZHeUgwV_Wc827gt5oErfAE2aMzI",
+  authDomain: "naigc-rebrand-color-vote.firebaseapp.com",
+  projectId: "naigc-rebrand-color-vote",
+  storageBucket: "naigc-rebrand-color-vote.firebasestorage.app",
+  messagingSenderId: "294439043107",
+  appId: "1:294439043107:web:1d5844c34953d866c9f196"
 };
